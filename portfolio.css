@@ -1,0 +1,26 @@
+body {
+	background-color: Beige;
+}
+.center {
+    text-align: center;
+}
+
+p {
+	color: Teal;
+}
+
+h1 {
+	color: Darkslategrey;
+	font-family: "Courier New";
+	border-style: dotted;
+	border-color: grey;
+}
+
+h5 {
+	font-style: italic;
+	color: Darkslategrey;
+}
+
+h3 {
+	color: DimGrey;
+}
