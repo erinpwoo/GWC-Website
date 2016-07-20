@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Erin's Porfolio</title>
+		
 		<link rel="stylesheet" type="text/css" href="portfolio.css">
 	</head>
 		<h1> <center>
@@ -11,27 +12,51 @@
 		<h4>
 			Welcome!
 		</h4>
-		<center> <img src="giphy.gif" alt="prof image" style="width:200px;height:200px;"> </center>
+		
+		<p>Hi, my name is Erin Woo. I am a rising senior at Burlingame High School and this is my first year learning how to code at Twitter with Girls Who Code.
+				Here is a collection of all of the work I have done so far in the program.	</p>
+		<center> 
+			<img class="mySlides" src="prof.jpg" alt="prof image" style="width:350px;height:350px;">
+			<img class="mySlides" src="loveislove.jpg" alt="prof image" style="width:600px;height:350px;">
+			<img class="mySlides" src="13709800_1210355305683845_130452676395620972_n.jpg" alt="prof image" style="width:600px;height:350px;">
+			<img class="mySlides" src="13495133_1197438990308810_6043606733713502252_n.jpg" alt="prof image" style="width:585px;height:350px;">
+			<img class="mySlides" src="reshma.jpg" alt="prof image" style="width:450px;height:350px;">
+
+			<img class="mySlides" src="group.jpg" alt="prof image" style="width:450px;height:350px;">
+			<img class="mySlides" src="winnnnning.jpg" alt="prof image" style="width:700px;height:350px;">
+
+
+		<script>
+		var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+		</script>
+		 </center>
 			<p>
-				Hi, my name is Erin Woo. I am a rising senior at Burlingame High School and this is my first year learning how to code at Twitter with Girls Who Code.
-				Here is a collection of all of the work I have done so far in the program.
-				<p>	<center>
+				<center>
 				<a href="https://www.facebook.com/erin.woo.7" target="_blank">Facebook</a>
 				<a href="https://www.twitter.com/erinwoohoo82" target="_blank">Twitter</a>
 				<a href="https://www.linkedin.com/in/erin-w-070776121" target="_blank">LinkedIn</a>
 				<a href="https://www.instagram.com/erinwoohoo82/" target="_blank">Instagram</a>
 				</p>
-
-
 				
-			</p>
+				<!-- <img src="giphy.gif" alt="prof image" style="width:200px;height:200px;">  -->
+				 </center>
+
 		
-			<img src="prof.jpg" alt="prof image" style="width:200px;height:200px;">
-			<img src="loveislove.jpg" alt="prof image" style="width:360px;height:200px;">
-			<img src="13709800_1210355305683845_130452676395620972_n.jpg" alt="prof image" style="width:360px;height:200px;">
-			<img src="13495133_1197438990308810_6043606733713502252_n.jpg" alt="prof image" style="width:300px;height:200px;">
+
 			
-			</center>
 		<h3>SCRATCH PROJECTS </h3>
 			<h5>Paddle Ball</h5>
 			<p>This is one of the first major projects we began with on Scratch. We applied our knowledge on
@@ -64,6 +89,26 @@
 			given color palette.</p>
 			<img src="pixels3.png" alt="pygame" style="width:800px;height:300px;">
 			<h5>Flashing Bouncy Ball</h5>
+			<p>This project was probably the most time consuming, considering that we spent most of our time debugging
+			the program. I think the most difficult part was controlling the motion of the ball, and changing its
+			movement each time it bounced off an edge. </p>
+			
 			<img src="pygame4.png" alt="pygame1" style="width:950px;height:400px;">
+			
+	<style>
+	a:link, a:visited {
+    background-color: #800000;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: #660000;
+}
+
+	</style>
 	</body>
 </html>
