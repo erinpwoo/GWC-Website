@@ -12,11 +12,11 @@
       }
     </style>
     
-    
+<body>
 		
 		<link rel="stylesheet" type="text/css" href="portfolio.css">
 	</head>
-		<h1> <center>
+		<h1 class="title"> <center>
 			<img src="twitter3.png" alt="prof image" style="width:40px;height:30px;"> Erin's GWC SIP Portfolio <img src="GWC_logo_2016_.png" alt="prof image" style="width:100px;height:40px;">
 			</center>
 		</h1>
@@ -110,9 +110,9 @@ function carousel() {
 			<img src="pygame4.png" alt="pygame1" style="width:950px;height:400px;">
 	
 	
-	<h5>Integrating API using Google Maps</h5>
-	<p>We played around using APIs and learned how to integrate maps into our websites. This map shows the
-	area around my high school.</p>
+	<h5>Integrating API using Google Maps: My Favorite Places</h5>
+	<p>We played around using APIs and learned how to integrate maps into our websites. The markers
+	represent some of my favorite places :)</p>
 	<center>
 			<div id="map"></div>
 	
@@ -130,7 +130,174 @@ function carousel() {
     position: myLatLng,
     map: map,
     title: 'School!'
+     }); 
+     
+	var marker1 = new google.maps.Marker({
+    position: {lat: 37.778674246609306, lng:-122.4576867328401},
+    map: map,
+    title: 'Rossi'
+
   });
+  	var marker2 = new google.maps.Marker({
+    position: {lat: 37.7767902, lng:-122.4164055},
+    map: map,
+    title: 'Twitter HQ'
+
+  });
+  
+  var marker3 = new google.maps.Marker({
+    position: {lat: 37.7887954, lng:-122.42934159999999},
+    map: map,
+    title: 'JCYC'
+
+  });
+  
+  var marker4 = new google.maps.Marker({
+    position: {lat: 37.7807973, lng:-122.47783809999999},
+    map: map,
+    title: 'Joes Ice Cream'
+
+  });
+
+var marker5 = new google.maps.Marker({
+    position: {lat: 37.79346480691878, lng:-122.48348146776732},
+    map: map,
+    title: 'Baker Beach'
+
+  });
+  
+var marker6 = new google.maps.Marker({
+    position: {lat: 35.7067, lng:139.8684},
+    map: map,
+    title: 'Edogawa-ku, Tokyo, Japan'
+
+  });
+  
+  var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h2 id="firstHeading" class="firstHeading">Burlingame High School</h2>'+
+            '<div id="bodyContent">'+
+            '<p><b>Burlingame High School</b> is located on 1 Mangini Way in Burlingame, CA. '+
+            'I attended Burlingame High School from 2013-2017.'
+            '<p>Website: <a href="https://bhs.schoolloop.com</a>'
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        
+        marker.addListener('mouseover', function() {
+          infowindow.open(map, marker);
+        });
+        
+    var contentString1 = '<div id="content1">'+
+            '<div id="siteNotice1">'+
+            '</div>'+
+            '<h2 id="firstHeading1" class="firstHeading1">Rossi Playground</h2>'+
+            '<div id="bodyContent1">'+
+            '<p>I spent a lot of my childhood at my grandparents house with my cousins. '+
+            'We would often scooter to the park and play there for hours.</p>'
+            '</div>'+
+            '</div>';
+
+        var infowindow1 = new google.maps.InfoWindow({
+          content: contentString1
+        });
+        
+        marker1.addListener('mouseover', function() {
+          infowindow1.open(map, marker1);
+        });
+        
+    var contentString2 = '<div id="content2">'+
+            '<div id="siteNotice2">'+
+            '</div>'+
+            '<h2 id="firstHeading2" class="firstHeading2">Twitter HQ</h2>'+
+            '<div id="bodyContent2">'+ '<h3 id="2ndHeading2" class="2ndHeading2">1355 Market Street, San Francisco, CA</h3>'+
+            '<p>I was lucky enough to be placed at the <b>Twitter HQ</b> for Girls Who Code Summer Immrsion '+
+            'program. I spent 7 weeks here learning how to program and getting a taste of what its '+
+            'like to be in the tech industry.</p>'
+            '</div>'+
+            '</div>';
+
+        var infowindow2= new google.maps.InfoWindow({
+          content: contentString2
+        });
+        
+        marker2.addListener('mouseover', function() {
+          infowindow2.open(map, marker2);
+        });
+        
+        var contentString3 = '<div id="content3">'+
+            '<div id="siteNotice3">'+
+            '</div>'+
+            '<h2 id="firstHeading3" class="firstHeading3">Japanese Community Youth Council</h2>'+
+            '<div id="bodyContent3">'+ '<h3 id="2ndHeading3" class="2ndHeading3">2012 Pine Street, San Francisco, CA</h3>'+
+            '<p>Before I attended Girls Who Code, I originally worked as a Summer Camp Day Counselor '+
+            'for the Japanese Community Youth Councils Tomodachi Summer Program. '+
+            'I also am a member of the Japantown Youth Leaders during the school year and our meetings are held here. </p>'
+            '</div>'+
+            '</div>';
+
+        var infowindow3= new google.maps.InfoWindow({
+          content: contentString3
+        });
+        
+        marker3.addListener('mouseover', function() {
+          infowindow3.open(map, marker3);
+        });
+        
+        var contentString4 = '<div id="content4">'+
+            '<div id="siteNotice4">'+
+            '</div>'+
+            '<h2 id="firstHeading4" class="firstHeading4">Joes Ice Cream</h2>'+
+            '<div id="bodyContent4">'+ '<h3 id="2ndHeading4" class="2ndHeading4">5420 Geary Blvd, San Francisco, CA </h3>'+
+            '<p><b>Joes</b> is the best spot for ice cream in the Richmond District (I always get their cookies and cream flavor!!)  </p>'
+            '</div>'+
+            '</div>';
+
+        var infowindow4= new google.maps.InfoWindow({
+          content: contentString4
+        });
+        
+        marker4.addListener('mouseover', function() {
+          infowindow4.open(map, marker4);
+        });
+        
+        var contentString5 = '<div id="content5">'+
+            '<div id="siteNotice5">'+
+            '</div>'+
+            '<h2 id="firstHeading5" class="firstHeading5">Baker Beach</h2>'+
+            '<div id="bodyContent5">'+ '<h3 id="2ndHeading5" class="2ndHeading5">San Francisco, CA </h3>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow5= new google.maps.InfoWindow({
+          content: contentString5
+        });
+        
+        marker5.addListener('mouseover', function() {
+          infowindow5.open(map, marker5);
+        });
+        
+    var contentString6 = '<div id="content6">'+
+            '<div id="siteNotice6">'+
+            '</div>'+
+            '<h2 id="firstHeading6" class="firstHeading6">Edogawa-ku, Tokyo, Japan</h2>'+
+            '<p>In 2015, I participated in a Summer Exchange Program in Japan. The program was hosted by the Burlingame and Edogawa Rotary Clubs. I love Japan, mainly because '+
+            'it was the first country I ever visited outside the US.</p>'
+            '<div id="bodyContent6">'+ '<h3 id="2ndHeading6" class="2ndHeading6">San Francisco, CA </h3>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow6= new google.maps.InfoWindow({
+          content: contentString6
+        });
+        
+        marker6.addListener('mouseover', function() {
+          infowindow6.open(map, marker6);
+        });
   }
     </script>
     
@@ -153,8 +320,8 @@ function carousel() {
 	
 } </style></div> </center>
 	
-	<style class="soc">
-	a:link, a:visited {
+	<style > .soc
+	{
     background-color: #800000;
     color: white;
     padding: 14px 25px;
@@ -163,6 +330,7 @@ function carousel() {
     text-decoration: none;
     display: inline-block;
     border-radius: 25px; 
+
 }
 
 a:hover, a:active {
