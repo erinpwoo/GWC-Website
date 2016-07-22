@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Erin's Porfolio</title>
+		<title>Erin's Portfolio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    </style>
+    
+    
 		
 		<link rel="stylesheet" type="text/css" href="portfolio.css">
 	</head>
@@ -9,13 +20,16 @@
 			<img src="twitter3.png" alt="prof image" style="width:40px;height:30px;"> Erin's GWC SIP Portfolio <img src="GWC_logo_2016_.png" alt="prof image" style="width:100px;height:40px;">
 			</center>
 		</h1>
+		
 		<h4>
 			Welcome!
 		</h4>
-		
+	
 		<p>Hi, my name is Erin Woo. I am a rising senior at Burlingame High School and this is my first year learning how to code at Twitter with Girls Who Code.
 				Here is a collection of all of the work I have done so far in the program.	</p>
-		<center> 
+		
+<!-- 			<img src="giphy.gif" alt="prof image" style="width:200px;height:200px;"> -->
+			<center> 
 			<img class="mySlides" src="prof.jpg" alt="prof image" style="width:350px;height:350px;">
 			<img class="mySlides" src="loveislove.jpg" alt="prof image" style="width:600px;height:350px;">
 			<img class="mySlides" src="13709800_1210355305683845_130452676395620972_n.jpg" alt="prof image" style="width:600px;height:350px;">
@@ -45,13 +59,13 @@ function carousel() {
 		 </center>
 			<p>
 				<center>
-				<a href="https://www.facebook.com/erin.woo.7" target="_blank">Facebook</a>
-				<a href="https://www.twitter.com/erinwoohoo82" target="_blank">Twitter</a>
-				<a href="https://www.linkedin.com/in/erin-w-070776121" target="_blank">LinkedIn</a>
-				<a href="https://www.instagram.com/erinwoohoo82/" target="_blank">Instagram</a>
+				<a class=soc href="https://www.facebook.com/erin.woo.7" target="_blank">Facebook</a>
+				<a class=soc href="https://www.twitter.com/erinwoohoo82" target="_blank">Twitter</a>
+				<a class=soc href="https://www.linkedin.com/in/erin-w-070776121" target="_blank">LinkedIn</a>
+				<a class=soc href="https://www.instagram.com/erinwoohoo82/" target="_blank">Instagram</a>
+				<a class=soc href="https://www.youtube.com/erinwfilms/" target="_blank">Videos</a>
 				</p>
-				
-				<!-- <img src="giphy.gif" alt="prof image" style="width:200px;height:200px;">  -->
+				 
 				 </center>
 
 		
@@ -94,8 +108,52 @@ function carousel() {
 			movement each time it bounced off an edge. </p>
 			
 			<img src="pygame4.png" alt="pygame1" style="width:950px;height:400px;">
-			
-	<style>
+	
+	
+	<h5>Integrating API using Google Maps</h5>
+	<p>We played around using APIs and learned how to integrate maps into our websites. This map shows the
+	area around my high school.</p>
+	<center>
+			<div id="map"></div>
+	
+    <script>
+
+    function initMap() {
+  var myLatLng = {lat: 37.582929, lng: -122.34746940000002};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'School!'
+  });
+  }
+    </script>
+    
+    
+    
+    
+    
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDW2Db7Bhov6MWax5-CV7nDJoqtkaHbwA&callback=initMap">
+    </script>
+		
+	<div><style>
+	#map {
+        width: 50%;
+        height: 400px;
+    a: link, a:visited {
+    color: none;
+	}
+	
+	
+} </style></div> </center>
+	
+	<style class="soc">
 	a:link, a:visited {
     background-color: #800000;
     color: white;
@@ -104,7 +162,7 @@ function carousel() {
 	font-family: Courier New;
     text-decoration: none;
     display: inline-block;
-    border-radius: 25px;
+    border-radius: 25px; 
 }
 
 a:hover, a:active {
